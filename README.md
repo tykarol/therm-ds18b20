@@ -4,45 +4,45 @@ Get temperature from DS18B20 sensor connected to Raspberry Pi by 1-wire.
 
 ## How to use
 ```javascript
-    var Thermometer = require('./index');
-    
-    // Example 1 - Get data in the interval
-    var therm1 = new Thermometer({
-        id: '28-000003eacfa3', // device id
-        interval: 600000 // interval in ms, 600000ms = 10min
-    }).on('data', function(data) {
-        if(data) {
-            console.log(data);
-        }
-    }).run();
-    
-    // Example 2 - Get data on demand
-    var therm2 = new Thermometer({
-        id: '28-000003eacfa3' // device id
-    }).on('data', function(data) {
-        if(data) {
-            console.log(data);
-        }
-    }).init();
+var Thermometer = require('./index');
 
-    therm2.get(); // This works also with interval
+// Example 1 - Get data in the interval
+var therm1 = new Thermometer({
+    id: '28-000003eacfa3', // device id
+    interval: 600000 // interval in ms, 600000ms = 10min
+}).on('data', function(data) {
+    if(data) {
+        console.log(data);
+    }
+}).run();
 
-    // Example 3 - Handle errors
-    var therm3 = new Thermometer({
-        id: '28-000003eacfa3', // device id
-        interval: 600000 // interval in ms, 600000ms = 10min
-    }).on('init', function() {
-        console.log('inited');
-    }).on('data', function(data) {
-        if(data) {
-            console.log(data);
-        }
-    }).on('error', function(error) {
-        console.log(error)
-    }).run();
+// Example 2 - Get data on demand
+var therm2 = new Thermometer({
+    id: '28-000003eacfa3' // device id
+}).on('data', function(data) {
+    if(data) {
+        console.log(data);
+    }
+}).init();
 
-    // To halt interval you can use halt method
-    therm3.halt();
+therm2.get(); // This works also with interval
+
+// Example 3 - Handle errors
+var therm3 = new Thermometer({
+    id: '28-000003eacfa3', // device id
+    interval: 600000 // interval in ms, 600000ms = 10min
+}).on('init', function() {
+    console.log('inited');
+}).on('data', function(data) {
+    if(data) {
+        console.log(data);
+    }
+}).on('error', function(error) {
+    console.log(error)
+}).run();
+
+// To halt interval you can use halt method
+therm3.halt();
 ```
 
 ### Options
