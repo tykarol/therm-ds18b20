@@ -2,9 +2,13 @@
 
 Get temperature from DS18B20 sensor connected to Raspberry Pi by 1-wire.
 
+## Install
+
+    npm install --save therm-ds18b20
+
 ## How to use
 ```javascript
-var Thermometer = require('./index');
+var Thermometer = require('therm-ds18b20');
 
 // Example 1 - Get data in the interval
 var therm1 = new Thermometer({
