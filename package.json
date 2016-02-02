@@ -1,0 +1,23 @@
+{
+  "name": "therm-ds18b20",
+  "version": "0.1.0",
+  "description": "Get temperature from DS18B20 sensor connected to Raspberry Pi by 1-wire.",
+  "author": {
+    "name": "Karol Tyka",
+    "email": "karol@tykarol.com"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tykarol/therm-ds18b20"
+  },
+  "bugs": {
+    "url": "https://github.com/tykarol/therm-ds18b20/issues"
+  },
+  "keywords": [
+    "raspberrypi",
+    "ds18b20",
+    "1wire"
+  ],
+  "license": "MIT"
+}
