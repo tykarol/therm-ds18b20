@@ -3,7 +3,7 @@
 Get temperature from DS18B20 sensor connected to Raspberry Pi by 1-wire.
 
 ## How to use
-    ```javascript
+```javascript
     var Thermometer = require('./index');
     
     // Example 1 - Get data in the interval
@@ -43,7 +43,7 @@ Get temperature from DS18B20 sensor connected to Raspberry Pi by 1-wire.
 
     // To halt interval you can use halt method
     therm3.halt();
-    ```
+```
 
 ### Options
     
